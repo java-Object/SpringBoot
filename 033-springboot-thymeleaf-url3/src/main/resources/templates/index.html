@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>页面详情</title>
+</head>
+<body>
+    <h3>相对路径：多个参数，普通风格</h3>
+    <a th:href="@{/test3?id=111}">一个参数</a><br>
+    <a th:href="@{/test3(id=111)}">一个参数</a><br>
+
+    <h3>相对路径：多个参数，RESTFul风格</h3>
+    <a th:href="@{/test/100}">一个参数</a><br>
+    <a th:href="@{/test2/100/李四/18}">一对参数</a><br>
+
+
+
+    <!--<a th:href="@{/test2/${id}/${name}/${age}}">获取参数</a><br>-->
+    <a th:href="@{'/test2/'+${id}+'/'+${name}+'/'+${age}}">获取参数</a><br>
+
+</body>
+</html>

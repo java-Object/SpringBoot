@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>each集合遍历map</title>
+</head>
+<body>
+    <h2>开始遍历map</h2>
+    <div th:each="map,mapStatu:${userMap}">
+        map的个数：<span th:text="${mapStatu.count}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        map集合中所有的key：<span th:text="${map.key}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        id:<span th:text="${map.value.id}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        姓名:<span th:text="${map.value.name}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        住址:<span th:text="${map.value.addr}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+</body>
+</html>

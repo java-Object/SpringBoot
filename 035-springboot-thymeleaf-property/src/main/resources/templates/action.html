@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>action</title>
+</head>
+<body>
+    <h2>请求路径的使用</h2>
+    <form th:action="@{'/index?data='+${action}}" th:method="post">
+        <input type="submit" value="跳转" />
+    </form>
+    <h2>定义超链接：主要结合url表达式获取动态变量</h2>
+    <a th:href="'http://www.baidu.com?id=' + ${action}">th:href链接</a><br>
+    <a th:href="@{meinv.html}">引入资源</a><br>
+
+
+</body>
+</html>

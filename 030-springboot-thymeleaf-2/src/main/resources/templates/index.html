@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户详情</title>
+</head>
+<body>
+    <h2>标准变量表达式${}</h2>
+    用户编号：<span th:text="${user.id}">静态的id</span><br>
+    用户姓名：<span th:text="${user.name}">静态的name</span><br>
+    用户住址：<span th:text="${user.addr}">静态的addr</span><br>
+    <h2>选择变量表达式*{}</h2>
+    用户编号：<span th:text="*{user.id}">静态的id</span><br>
+    用户姓名：<span th:text="*{user.name}">静态的name</span><br>
+    用户住址：<span th:text="*{user.addr}">静态的addr</span><br>
+</body>
+</html>

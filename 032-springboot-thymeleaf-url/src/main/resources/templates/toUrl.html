@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>url</title>
+</head>
+<body>
+    <h2>路径表达式：带参数</h2>
+    普通超链接：<a href="/toIndex?id=666&name=张三">用户详情</a><br>
+    路径表达式超链接1：<a th:href="@{/toIndex?id=666&name=张三}">用户详情</a><BR>
+    路径表达式超链接2：<a th:href="@{'/toIndex?id='+${666}+'&name='+${'张三'}}">用户详情</a><BR>
+    <h2>路径表达式：带参数，推荐</h2>
+    路径表达式超链接1：<a th:href="@{/toIndex(id=666,name='张三')}">用户详情</a><BR>
+    路径表达式超链接2：<a th:href="@{/toIndex(id=${id},name=${name})}">用户详情</a><BR>
+
+</body>
+</html>
